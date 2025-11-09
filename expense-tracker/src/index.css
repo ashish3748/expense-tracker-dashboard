@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌈 Theme Colors (Light & Dark) */
+:root {
+  --bg: #f0f4f8;
+  --card: rgba(255, 255, 255, 0.9);
+  --text: #1e293b;
+  --primary: #3b82f6;
+  --secondary: #6366f1;
+}
+
+[data-theme='dark'] {
+  --bg: #0b1220;
+  --card: rgba(17, 25, 40, 0.8);
+  --text: #e2e8f0;
+  --primary: #60a5fa;
+  --secondary: #a78bfa;
+}
+
+/* 🌐 Base Body Style */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ✨ Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease;
+}
